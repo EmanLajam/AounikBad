@@ -18,6 +18,8 @@ import java.util.ArrayList;
 
 
 public class RestaurantList extends AppCompatActivity implements MyAdapter.OnListListener {
+    // رسايكل اللي انشائنها في اللي اوت
+    //
         private RecyclerView recyclerView;
         private ArrayList<Resturant> resturantList;
         DatabaseReference databaseReference;
@@ -30,6 +32,7 @@ public class RestaurantList extends AppCompatActivity implements MyAdapter.OnLis
             resturantList = new ArrayList<Resturant>();
 
             recyclerView.setHasFixedSize(true);
+            // تربط الادوات وتظره البيانات فيها الصورة و الكلام
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
             databaseReference = FirebaseDatabase.getInstance().getReference().child("Resturans");
@@ -43,6 +46,7 @@ public class RestaurantList extends AppCompatActivity implements MyAdapter.OnLis
 
 
                     }
+                    // الادابرت وظيفاتها انها توفر العناصر اللي يحتاجتجها اليوز
                     MyAdapter adapter = new MyAdapter(RestaurantList.this,resturantList,RestaurantList.this);
                     recyclerView.setAdapter(adapter);
                 }
