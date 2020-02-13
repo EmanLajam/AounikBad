@@ -10,32 +10,25 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/resturantName"
+            android:id="@+id/ordertName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Resturant Name"
             android:layout_margin="20dp"
             android:padding="3dp"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_toRightOf="@id/imageView8"></TextView>
+            android:textStyle="bold">
+          </TextView>
+
         <TextView
             android:id="@+id/resturantLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/ordertName"
+            android:paddingLeft="10dp"
             android:text="Resturant Location"
-            android:padding="5dp"
-            android:textSize="15dp"
-            android:layout_below="@id/resturantName"
-            android:layout_toEndOf="@id/imageView8"
-            android:layout_toRightOf="@id/imageView8"></TextView>
+            android:textSize="15dp"></TextView>
 
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-          ></ImageView>
     </RelativeLayout>
 
 
