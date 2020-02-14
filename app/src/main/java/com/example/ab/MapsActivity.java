@@ -42,8 +42,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private final long MIN_DIST = 5;
 
     private TextView userLocation;
-    private EditText floorNum;
-    private EditText roomNum;
     private EditText comment;
     private Button update;
     double latitude;
@@ -61,8 +59,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, PackageManager.PERMISSION_GRANTED);
 
         userLocation = findViewById(R.id.location);
-        floorNum = findViewById(R.id.floorID);
-        roomNum = findViewById(R.id.roomID);
         comment = findViewById(R.id.commentID);
         update = findViewById(R.id.update);
 
@@ -172,12 +168,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View view) {
                 String id = databaseReference.push().getKey();
-                final UserLocation locationName = new UserLocation(id, latitude,longitude ,userLocation.getText().toString(),floorNum.getText().toString(),roomNum.getText().toString(),comment.getText().toString() );
+                final UserLocation locationName = new UserLocation(id, latitude,longitude ,userLocation.getText().toString(),comment.getText().toString() );
 
 
                         databaseReference.child(id).setValue(locationName);
 
-                        Toast.makeText(MapsActivity.this,"successfully registered",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MapsActivity.this,"Done",Toast.LENGTH_SHORT).show();
                         }
 
 

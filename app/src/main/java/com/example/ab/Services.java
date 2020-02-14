@@ -20,8 +20,8 @@ public class Services extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent ResturantList = new Intent(getApplicationContext(), RestaurantList.class);
-                startActivity(ResturantList);
+            /*    Intent ResturantList = new Intent(getApplicationContext(), OrderList.class);
+                startActivity(ResturantList);*/
             }
         });
     }
